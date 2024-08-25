@@ -18,11 +18,10 @@
     "test-rpc": "testrpc -m \"cat category sport grid anger game language leisure edge dumb canvas feel\"",
     "parity": "parity --jsonrpc-cors 'http://ethereum.github.io/browser-solidity' -jw --jsonrpc-interface 127.0.0.1 --jsonrpc-port 8545 --identity 'Ethereum Parity Node on' --nodiscover --nat none --chain dev --jsonrpc-apis 'web3,eth,net,parity,rpc,parity_accounts,personal,traces,rpc' --author 0x00296DeBe65f9F0f4c0D269939e061e4515594e4 --unlock 0x00296DeBe65f9F0f4c0D269939e061e4515594e4 --password passwords/parity.pass --ipcpath './geth.ipc' --force-ui --reseal-min-period 0 --gas-floor-target 4300000 --gas-cap 20000000000"
   },
-  "engines": {
-    "node": "~4.2.1",
-    "npm": "~2.2.0"
-  },
   "dependencies": {
+    "@ensdomains/ens-contracts": "^1.0.1",
+    "@truffle/blockchain-utils": "^0.1.9",
+    "@truffle/contract": "^4.6.31",
     "babel-cli": "^6.14.0",
     "body-parser": "~1.15.1",
     "consolidate": "^0.14.5",
@@ -42,16 +41,15 @@
     "nodemon": "^1.11.0",
     "npm-run-all": "3.0.0",
     "request": "^2.75.0",
-    "truffle-contract": "^1.1.10",
     "web3": "^0.17.0-beta"
   },
   "devDependencies": {
     "autoprefixer": "^6.4.0",
     "babel-core": "6.14.0",
     "babel-loader": "6.2.5",
+    "babel-plugin-remove-comments": "^2.0.0",
     "babel-plugin-transform-es2015-for-of": "^6.18.0",
     "babel-plugin-transform-runtime": "^6.15.0",
-    "babel-plugin-remove-comments": "^2.0.0",
     "babel-polyfill": "^6.20.0",
     "babel-preset-babili": "0.0.8",
     "babel-preset-env": "^1.5.1",
@@ -86,6 +84,6 @@
     "strip-ansi": "^3.0.1",
     "style-ext-html-webpack-plugin": "^2.0.5",
     "style-loader": "0.13.1",
-    "url-loader": "0.5.7"  
-    }
+    "url-loader": "0.5.7"
+  }
 }
